@@ -1,0 +1,47 @@
+# Prerequisites
+*.d
+
+# Object files and libraries
+*.o
+*.ko
+*.obj
+*.elf
+*.a
+*.lib
+*.so
+*.so.*
+*.dylib
+*.dll
+
+# Executables (compiled C binaries)
+*.exe
+*.out
+*.app
+
+# Standard DSA binary names (common executable outputs without extensions)
+# Add your specific test binary names here if needed
+main
+test
+a.out
+
+# Valgrind & Debugging output
+valgrind-out.txt
+vgcore.*
+*.dSYM/
+*.su
+*.idb
+*.pdb
+
+# Build systems / Directory outputs
+build/
+bin/
+obj/
+dist/
+.vscode/
+.idea/
+*.swp
+*~
+
+# OS generated files
+.DS_Store
+Thumbs.db
