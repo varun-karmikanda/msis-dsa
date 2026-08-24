@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1787248569 source:c:\users\varunkarmikanda\msis\sem1\dsa\hm\lab3\slist\main.c
+	<stdio.h>
+	<stdlib.h>
+	"slist.h"
+
+1787311298 c:\users\varunkarmikanda\msis\sem1\dsa\hm\lab3\slist\slist.h
+	<stdint.h>
+
+1787311585 source:c:\users\varunkarmikanda\msis\sem1\dsa\hm\lab3\slist\slist.c
+	<stdlib.h>
+	<stdint.h>
+	"slist.h"
+
