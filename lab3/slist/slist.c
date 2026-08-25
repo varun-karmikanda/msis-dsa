@@ -88,12 +88,58 @@ List *slist_delete_head(List *list){
 }
 
 List *slist_delete_tail(List *list){
+    if(list -> tail != NULL){
+        Node *node = list -> tail;
+        if(list -> head == list -> tail){
+            list -> head = list -> tail = NULL;
+        } else {
+            Node *n;
+            for(n = list -> head; n -> next != list -> tail; n = n -> next);
+            n -> next = NULL;
+            list -> tail = n;
+        }
+        --list -> length;
+        free(node);
+    }
+    return list;
+}
+
+List *slist_add_in_between(List *list, uint32_t key, uint32_t data){
 
 }
 
-List *add_in_between(List *list, uint32_t key, uint32_t data);
+List *slist_add_after_data(List *list, uint32_t key, uint32_t data){
+    Node *current = list-> head;
+    for( ; current != NULL && current -> data != key; current = current -> next);
+    if(current != NULL){
+        Node * node = _list_new_node_(data);
+        node -> next = current -> next;
+        current -> next = node;
+        if(current == list -> tail){
+            list -> tail = node;
+        }
+        ++list -> length;
+    }
+    return list;
+}
 
-List *display_list(List *list){
+List *slist_reverse_list(List *list){
+    Node *previous = NULL;
+    Node *current = list-> head;
+    Node *next;
+    Node *new_tail = list -> head;
+    while(current != NULL){
+        next = current -> next;
+        current -> next = previous;
+        previous = current;
+        current = next;
+    }
+    list -> head = previous;
+    list -> tail = new_tail;
+    return list;
+}
+
+List *slist_display_list(List *list){
     printf("\nLINKEDLIST{\n\t");
     for(Node *node = list -> head; node != NULL; node = node -> next){
         printf("%d -> ", node -> data);

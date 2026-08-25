@@ -11,23 +11,35 @@ void test() {
     slist_add_head(l1, 90);
     slist_add_head(l1, 21);
 
-    display_list(l1);
+    slist_display_list(l1);
 
     slist_add_tail(l1, 5);
     slist_add_tail(l1, 1);
     slist_add_tail(l1, 8);
 
-    display_list(l1);
+    slist_display_list(l1);
 
     slist_delete_head(l1);
     slist_delete_head(l1);
 
-    display_list(l1);
-/*
+    slist_display_list(l1);
+
     slist_delete_tail(l1);
     slist_delete_tail(l1);
 
-    display_list(l1); */
+    slist_display_list(l1);
+
+    slist_add_after_data(l1, 67, 63);
+
+    slist_display_list(l1);
+
+    slist_reverse_list(l1);
+
+    slist_display_list(l1);
+
+    printf(l1 -> tail -> data);
+
+
 }
 
 
