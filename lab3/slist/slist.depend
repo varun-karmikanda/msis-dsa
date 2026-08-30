@@ -12,16 +12,19 @@
 	<stdint.h>
 	"slist.h"
 
-1787681593 source:c:\users\varunkarmikanda\msis\sem1\dsa\lab3\slist\main.c
+1788103959 source:c:\users\varunkarmikanda\msis\sem1\dsa\lab3\slist\main.c
 	<stdio.h>
 	<stdlib.h>
+	<assert.h>
 	"slist.h"
 
-1787681297 c:\users\varunkarmikanda\msis\sem1\dsa\lab3\slist\slist.h
+1788103636 c:\users\varunkarmikanda\msis\sem1\dsa\lab3\slist\slist.h
 	<stdint.h>
+	<stdbool.h>
 
-1787681494 source:c:\users\varunkarmikanda\msis\sem1\dsa\lab3\slist\slist.c
+1788104132 source:c:\users\varunkarmikanda\msis\sem1\dsa\lab3\slist\slist.c
 	<stdlib.h>
 	<stdint.h>
+	<stdbool.h>
 	"slist.h"
 
