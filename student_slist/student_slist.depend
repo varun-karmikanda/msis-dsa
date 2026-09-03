@@ -1,0 +1,19 @@
+# depslib dependency file v1.0
+1788454624 source:c:\users\varunkarmikanda\msis\sem1\dsa\student_slist\main.c
+	<assert.h>
+	<stdio.h>
+	"student_slist.h"
+
+1788454668 c:\users\varunkarmikanda\msis\sem1\dsa\student_slist\student_slist.h
+	<stdint.h>
+	<stddef.h>
+	<stdbool.h>
+
+1788454663 source:c:\users\varunkarmikanda\msis\sem1\dsa\student_slist\student_slist.c
+	<stdint.h>
+	<stddef.h>
+	<stdlib.h>
+	<stdbool.h>
+	<string.h>
+	"student_slist.h"
+
