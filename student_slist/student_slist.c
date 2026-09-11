@@ -74,9 +74,11 @@ StudentNode *student_list_lookup_name(StudentList *student_list, char name[MAX_N
 StudentList *student_list_add_student(StudentList *student_list, uint32_t roll_no, char name[MAX_NAME_LENGTH], float marks){
     if(student_list == NULL) return NULL;
 
-    StudentNode *new_student_node = _student_list_new_node_(roll_no, name, marks); 
+    if(student_list_lookup_roll_no(student_list, roll_no)) return student_list;
+
+    StudentNode *new_student_node = _student_list_new_node_(roll_no, name, marks);
     if(new_student_node == NULL) return NULL;
-    
+
     if(student_list -> head == NULL){
         student_list -> head = student_list ->tail = new_student_node;
     } else {
@@ -89,7 +91,7 @@ StudentList *student_list_add_student(StudentList *student_list, uint32_t roll_n
 
 StudentList *student_list_remove_student(StudentList *student_list, uint32_t roll_no){
     if(student_list == NULL || student_list -> head == NULL) return student_list;
-    
+
     StudentNode *previous = NULL;
     StudentNode *current = student_list -> head;
 
@@ -130,7 +132,7 @@ void student_list_display(StudentList *student_list){
     } else {
         printf("\nSTUDENT_LIST{\n\t");
         for(StudentNode *student_node = student_list -> head; student_node != NULL; student_node = student_node -> next){
-            printf("| %d | %s | %f | -> \n\t", student_node -> data.roll_no, student_node -> data.name, student_node -> data.marks);
+            printf("| %5u | %-10s | %12f | -> \n\t", student_node -> data.roll_no, student_node -> data.name, student_node -> data.marks);
         }
         printf("NULL\n}\n");
     }
