@@ -1,0 +1,17 @@
+# depslib dependency file v1.0
+1789323557 source:c:\users\varunkarmikanda\msis\sem1\dsa\double_linked_list\main.c
+	<stdio.h>
+	<stdlib.h>
+	<assert.h>
+	"double_linked_list.h"
+
+1789324045 source:c:\users\varunkarmikanda\msis\sem1\dsa\double_linked_list\double_linked_list.c
+	<stdint.h>
+	<stdbool.h>
+	<stdio.h>
+	"double_linked_list.h"
+
+1789278674 c:\users\varunkarmikanda\msis\sem1\dsa\double_linked_list\double_linked_list.h
+	<stdint.h>
+	<stdbool.h>
+
