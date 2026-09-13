@@ -100,6 +100,55 @@ void test_dll(){
 
     dll_display(list);
 
+//    detect_cycle
+
+    List *list_cycle = dll_new();
+
+    dll_add_head(list_cycle, 67);
+    dll_add_head(list_cycle, 55);
+    dll_add_head(list_cycle, 42);
+    dll_add_head(list_cycle, 31);
+
+    assert(dll_detect_cycle(list_cycle) == false);
+    dll_display(list_cycle);
+
+    Node * node_42 = dll_lookup(list_cycle, 42);
+
+    list_cycle -> tail -> prev -> next = node_42;
+    assert(dll_detect_cycle(list_cycle) == true);
+
+    dll_display(list_cycle);
+
+//    reverse
+    List *list_rev = dll_new();
+
+    dll_add_head(list_rev, 67);
+    dll_add_head(list_rev, 56);
+    dll_add_head(list_rev, 48);
+    dll_add_head(list_rev, 36);
+    dll_add_head(list_rev, 21);
+
+    dll_display(list_rev);
+
+    dll_reverse(list_rev);
+
+    dll_display(list_rev);
+
+//    delete_duplicate
+    List *list_dup = dll_new();
+
+    dll_add_head(list_dup, 67);
+    dll_add_head(list_dup, 56);
+    dll_add_head(list_dup, 67);
+    dll_add_head(list_dup, 36);
+    dll_add_head(list_dup, 67);
+
+    dll_display(list_dup);
+
+    dll_delete_duplicate(list_dup);
+
+    dll_display(list_dup);
+
 }
 
 int main()

@@ -218,15 +218,85 @@ uint32_t dll_element_at_position(List *list, uint32_t position){
     return curr -> data;
 }
 
-bool dll_detect_cycle(List *list);
+bool dll_detect_cycle(List *list){
+    if(list == NULL) return false;
 
-List *dll_reverse(List *list);
-List *dll_delete_duplicate(List *list);
+    Node *slow = list -> head, *fast = list -> head;
+
+    while(fast != NULL && fast -> next != NULL){
+        slow = slow -> next;
+        fast = fast -> next -> next;
+
+        if(slow == fast) return true;
+    }
+
+    return false;
+}
+
+
+List *dll_reverse(List *list){
+    if(list == NULL) return NULL;
+
+    Node *curr = list -> head, *temp;
+
+    while(curr != NULL){
+        temp = curr -> next;
+
+        curr -> next = curr -> prev;
+        curr -> prev = temp;
+
+        curr = temp;
+    }
+
+    temp = list -> head;
+    list -> head = list -> tail;
+    list -> tail = temp;
+
+    return list;
+}
+
+List *dll_delete_duplicate(List *list){
+    if(list == NULL) return NULL;
+
+    Node *curr = list -> head;
+    for(; curr != NULL && curr -> next != NULL; curr = curr -> next){
+        Node *runner = curr -> next;
+
+        while(runner != NULL){
+            Node *next_node = runner -> next;
+
+            if(curr -> data == runner -> data){
+                runner -> prev -> next = runner -> next;
+
+
+                if(runner -> next != NULL){
+                    runner -> next -> prev = runner -> prev;
+                } else {
+                    list -> tail = runner -> prev;
+                }
+
+                --list -> length;
+
+                free(runner);
+            }
+
+            runner = next_node;
+        }
+    }
+
+    return list;
+}
+
 
 List *dll_union(List *list_1, List *list_2);
 List *dll_intersection(List *list_1, List *list_2);
 
 void dll_display(List *list){
+    if(dll_detect_cycle(list)){
+        printf("\nDOUBLY_LINKED_LIST: << DETECTED CYCLE >>");
+        return;
+    }
+
     printf("\nDOUBLY_LINKED_LIST {");
     if(list -> head != NULL){
         printf("\n\tNULL (%p)", list -> head -> prev);
