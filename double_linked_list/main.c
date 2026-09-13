@@ -149,6 +149,12 @@ void test_dll(){
 
     dll_display(list_dup);
 
+//    union
+    dll_display(dll_union(list, list_dup));
+
+//    intersection
+    dll_display(dll_intersection(list, list_dup));
+
 }
 
 int main()

@@ -288,8 +288,42 @@ List *dll_delete_duplicate(List *list){
 }
 
 
-List *dll_union(List *list_1, List *list_2);
-List *dll_intersection(List *list_1, List *list_2);
+List *dll_union(List *list_1, List *list_2){
+    List *list_union = dll_new();
+
+    if(list_1 != NULL){
+        for(Node *node = list_1 -> head; node != NULL; node = node -> next){
+            if(!dll_lookup(list_union, node -> data)){
+                dll_add_tail(list_union, node -> data);
+            }
+        }
+    }
+
+    if(list_2 != NULL){
+        for(Node *node = list_2 -> head; node != NULL; node = node -> next){
+            if(!dll_lookup(list_union, node -> data)){
+                dll_add_tail(list_union, node -> data);
+            }
+        }
+    }
+
+    return list_union;
+}
+
+List *dll_intersection(List *list_1, List *list_2){
+    List *list_intersection = dll_new();
+
+    if(list_1 != NULL && list_2 != NULL){
+        for(Node *node = list_1 -> head; node != NULL; node = node -> next){
+            if(dll_lookup(list_2, node -> data) && !dll_lookup(list_intersection, node -> data)){
+                dll_add_tail(list_intersection, node -> data);
+            }
+        }
+    }
+
+    return list_intersection;
+}
+
 
 void dll_display(List *list){
     if(dll_detect_cycle(list)){
