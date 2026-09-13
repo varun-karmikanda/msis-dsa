@@ -1,11 +1,11 @@
 # depslib dependency file v1.0
-1789301181 source:c:\users\varunkarmikanda\msis\sem1\dsa\double_linked_list\main.c
+1789302619 source:c:\users\varunkarmikanda\msis\sem1\dsa\double_linked_list\main.c
 	<stdio.h>
 	<stdlib.h>
 	<assert.h>
 	"double_linked_list.h"
 
-1789301193 source:c:\users\varunkarmikanda\msis\sem1\dsa\double_linked_list\double_linked_list.c
+1789302479 source:c:\users\varunkarmikanda\msis\sem1\dsa\double_linked_list\double_linked_list.c
 	<stdint.h>
 	<stdbool.h>
 	<stdio.h>

@@ -189,10 +189,34 @@ List *dll_delete_on_data(List *list, uint32_t data){
 }
 
 
-Node *dll_lookup(List *list, uint32_t key);
+Node *dll_lookup(List *list, uint32_t key){
+    if(list == NULL) return NULL;
 
-uint32_t dll_length(List *list);
-uint32_t dll_element_at_position(List *list, uint32_t position);
+    Node *curr = list -> head;
+
+    for(; curr != NULL && curr -> data != key; curr = curr -> next);
+
+    if(curr == NULL) return NULL;
+
+    return curr;
+}
+
+uint32_t dll_length(List *list){
+    if(list == NULL) return 0;
+    return list -> length;
+}
+
+uint32_t dll_element_at_position(List *list, uint32_t position){
+    if(list == NULL) return 0;
+
+    if(position > list -> length) return 0;
+
+    Node *curr = list -> head;
+    for(int i = 1; i < position; i++){
+        curr = curr -> next;
+    }
+    return curr -> data;
+}
 
 bool dll_detect_cycle(List *list);
 

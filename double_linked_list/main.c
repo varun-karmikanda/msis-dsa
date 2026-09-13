@@ -79,6 +79,26 @@ void test_dll(){
 
     dll_display(list);
 
+//    lookup
+
+    assert(dll_lookup(list, 67));
+    assert(!dll_lookup(list, 6767));
+
+//    length
+
+    assert(dll_length(list) == 5);
+
+    List *list_len = dll_new();
+    assert(dll_length(list_len) == 0);
+
+    List *list_test = NULL;
+    assert(dll_length(list_test) == 0);
+
+//    element_at_position
+    assert(dll_element_at_position(list, 3) == 67);
+    assert(dll_element_at_position(list, 6767) == 0);
+
+    dll_display(list);
 
 }
 
