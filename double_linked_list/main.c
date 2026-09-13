@@ -12,7 +12,7 @@ void test_dll(){
 
     dll_display(list);
 
-    // add_head
+//     add_head
 
     dll_add_head(list, 67);
     dll_add_head(list, 29);
@@ -25,7 +25,7 @@ void test_dll(){
 
     dll_display(list);
 
-    // add_tail
+//     add_tail
 
     dll_add_tail(list, 420);
     dll_add_tail(list, 747);
@@ -37,7 +37,7 @@ void test_dll(){
 
     dll_display(list);
 
-    // add_on_data
+//     add_on_data
 
     dll_add_on_data(list, 67, 95);
     dll_add_on_data(list, 1, 18);
@@ -47,6 +47,38 @@ void test_dll(){
     assert(list -> length == 10);
 
     dll_display(list);
+
+//    delete_head
+
+    dll_delete_head(list);
+
+    assert(list -> head -> data == 18);
+    assert(list -> length == 9);
+
+    dll_display(list);
+
+//    delete_tail
+
+    dll_delete_tail(list);
+
+    assert(list -> tail -> data == 911);
+    assert(list -> length == 8);
+
+    dll_display(list);
+
+//    delete_on_data
+
+    dll_delete_on_data(list, 18);
+    dll_delete_on_data(list, 911);
+    dll_delete_on_data(list, 95);
+    dll_delete_on_data(list, 77);
+
+    assert(list -> head -> data == 25);
+    assert(list -> tail -> data == 747);
+    assert(list -> length == 5);
+
+    dll_display(list);
+
 
 }
 

@@ -45,6 +45,7 @@ List *dll_free(List *list){
     return list;
 }
 
+
 List *dll_add_head(List* list, uint32_t data){
     if(list == NULL) return NULL;
 
@@ -109,9 +110,84 @@ List *dll_add_on_data(List *list, uint32_t key, uint32_t data){
 }
 
 
-List *dll_delete_head(List *list);
-List *dll_delete_tail(List *list);
-List *dll_delete_on_data(List *list, uint32_t data);
+List *dll_delete_head(List *list){
+    if(list == NULL) return NULL;
+
+    if(list -> head == NULL) return list;
+
+    Node *temp = list -> head;
+
+    if(list -> head == list -> tail){
+        list -> head = list -> tail = NULL;
+    } else {
+        list -> head = list -> head -> next;
+        list -> head -> prev = NULL;
+    }
+
+    --list -> length;
+
+    free(temp);
+
+    return list;
+}
+
+List *dll_delete_tail(List *list){
+    if(list == NULL) return NULL;
+
+    if(list -> head == NULL) return list;
+
+    Node *curr = list -> head;
+    Node *temp;
+
+    if(curr == list -> tail){
+        temp = curr;
+        list -> head = list -> tail = NULL;
+    } else {
+        for(; curr -> next != list -> tail; curr = curr -> next);
+        temp = curr -> next;
+        curr -> next = NULL;
+        list -> tail = curr;
+    }
+
+    --list -> length;
+
+    free(temp);
+
+    return list;
+}
+
+List *dll_delete_on_data(List *list, uint32_t data){
+    if(list == NULL) return NULL;
+
+    if(list -> head == NULL) return list;
+
+    Node *curr = list -> head;
+
+    while(curr != NULL && curr -> data != data){
+        curr = curr -> next;
+    }
+
+    if(curr == NULL) return list;
+
+    if(curr -> prev != NULL){
+        curr -> prev -> next = curr -> next;
+    } else {
+        list -> head = curr -> next;
+    }
+
+    if(curr -> next != NULL){
+        curr -> next -> prev = curr -> prev;
+    } else {
+        list -> tail = curr -> prev;
+    }
+
+    --list -> length;
+
+    free(curr);
+
+    return list;
+}
+
 
 Node *dll_lookup(List *list, uint32_t key);
 
