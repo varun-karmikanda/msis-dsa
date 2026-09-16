@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1789576709 source:c:\users\varunkarmikanda\msis\sem1\dsa\stack\main.c
+	<stdio.h>
+	<stdlib.h>
+	<assert.h>
+	"stack.h"
+
+1789576058 source:c:\users\varunkarmikanda\msis\sem1\dsa\stack\stack.c
+	<stdio.h>
+	<stdint.h>
+	"stack.h"
+
+1789576058 c:\users\varunkarmikanda\msis\sem1\dsa\stack\stack.h
+	<stdint.h>
+
