@@ -2,6 +2,11 @@
 #include<stdint.h>
 #include "queue.h"
 
+static void _set_queue_result_(QueueResult *queue_result, uint32_t data, uint32_t status){
+    queue_result -> data = data;
+    queue_result -> status = status;
+}
+
 Queue queue_new(uint32_t size){
     size = (size > 0 && size <= MAX_QUEUE_LEN) ? size : MAX_QUEUE_LEN;
 
@@ -9,40 +14,34 @@ Queue queue_new(uint32_t size){
     return queue;
 }
 
-Queue *queue_add(Queue *queue, uint32_t data, QueueResult *queueResult){
+Queue *queue_add(Queue *queue, uint32_t data, QueueResult *queue_result){
     if(queue -> count < queue -> size){
         queue -> values[queue -> tail] = data;
         queue -> tail = (queue -> tail + 1) % queue -> size;
         ++queue -> count;
-        queueResult -> status = QUEUE_OK;
-        queueResult -> data = data;
+        _set_queue_result_(queue_result, data, QUEUE_OK);
     } else {
-        queueResult -> status = QUEUE_FULL;
-        queueResult -> data = RESULT_INVALID;
+        _set_queue_result_(queue_result, RESULT_INVALID, QUEUE_FULL);
     }
     return queue;
 }
 
-Queue *queue_remove(Queue *queue, QueueResult *queueResult){
+Queue *queue_remove(Queue *queue, QueueResult *queue_result){
     if(queue -> count > 0){
-        queueResult -> data = queue -> values[queue -> head];
+        _set_queue_result_(queue_result, queue -> values[queue -> head], QUEUE_OK);
         queue -> head = (queue -> head + 1) % queue -> size;
         --queue -> count;
-        queueResult -> status = QUEUE_OK;
     } else {
-        queueResult -> status = QUEUE_EMPTY;
-        queueResult -> data = RESULT_INVALID;
+        _set_queue_result_(queue_result, RESULT_INVALID, QUEUE_EMPTY);
     }
     return queue;
 }
 
-    Queue *queue_peek(const Queue *queue, QueueResult *queueResult){
+Queue *queue_peek(const Queue *queue, QueueResult *queue_result){
     if(queue -> count > 0){
-        queueResult -> data = queue -> values[queue -> head];
-        queueResult -> status = QUEUE_OK;
+        _set_queue_result_(queue_result, queue -> values[queue -> head], QUEUE_OK);
     } else {
-        queueResult -> data = RESULT_INVALID;
-        queueResult -> status = QUEUE_EMPTY;
+        _set_queue_result_(queue_result, RESULT_INVALID, QUEUE_EMPTY);
     }
     return queue;
 }

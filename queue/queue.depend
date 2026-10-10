@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1789577370 source:c:\users\varunkarmikanda\msis\sem1\dsa\queue\main.c
+	<stdio.h>
+	<stdlib.h>
+	<assert.h>
+	"queue.h"
+
+1791645023 c:\users\varunkarmikanda\msis\sem1\dsa\queue\queue.h
+	<stdint.h>
+
+1791647198 source:c:\users\varunkarmikanda\msis\sem1\dsa\queue\queue.c
+	<stdio.h>
+	<stdint.h>
+	"queue.h"
+

@@ -1,7 +1,7 @@
 #include<stdlib.h>
 #include<stdint.h>
 #include<stdbool.h>
-#include "slist.h"
+#include "singly_linked_list.h"
 
 static Node *_list_new_node_(uint32_t data){
     Node *node = (Node*) malloc (sizeof(Node));
