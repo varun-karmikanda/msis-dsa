@@ -28,3 +28,9 @@
 	<stdbool.h>
 	"slist.h"
 
+1788108260 source:c:\users\varunkarmikanda\msis\sem1\dsa\singly_linked_list\main.c
+	<stdio.h>
+	<stdlib.h>
+	<assert.h>
+	"slist.h"
+

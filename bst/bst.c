@@ -9,8 +9,8 @@
 BST *bst_new(){
     BST *bst = (BST*) malloc (sizeof(BST));
 
-    bst->root = NULL;
-    bst->mass = 0;
+    bst -> root = NULL;
+    bst -> mass = 0;
 
     return bst;
 }
@@ -18,45 +18,45 @@ BST *bst_new(){
 static TreeNode *_tree_node_new_(uint32_t data){
     TreeNode *new_tree_node = (TreeNode*) malloc (sizeof(TreeNode));
 
-    new_tree_node->data = data;
-    new_tree_node->left = new_tree_node->right = NULL;
+    new_tree_node -> data = data;
+    new_tree_node -> left = new_tree_node -> right = NULL;
 
     return new_tree_node;
 }
 
 BST *bst_add(BST *bst, uint32_t key){
     TreeNode *parent, *root;
-    parent = root = bst->root;
+    parent = root = bst -> root;
 
-    while(root != NULL && root->data != key){
+    while(root != NULL && root -> data != key){
         parent = root;
-        if(key < root->data)
-            root = root->left;
-        else if(key > root->data)
-            root = root->right;
+        if(key < root -> data)
+            root = root -> left;
+        else if(key > root -> data)
+            root = root -> right;
     }
 
     if(root == NULL){
         TreeNode *new_tree_node = _tree_node_new_(key);
         if(parent == NULL)
-            bst->root = new_tree_node;
-        else if(key < parent->data)
-            parent->left = new_tree_node;
-        else if(key > parent->data)
-            parent->right = new_tree_node;
-        ++bst->mass;
+            bst -> root = new_tree_node;
+        else if(key < parent -> data)
+            parent -> left = new_tree_node;
+        else if(key > parent -> data)
+            parent -> right = new_tree_node;
+        ++bst -> mass;
     }
     return bst;
 }
 
 uint32_t bst_find(const BST *bst, uint32_t key){
-    TreeNode *root= bst->root;
+    TreeNode *root= bst -> root;
 
     while(root != NULL){
-        if(key < root->data)
-            root = root->left;
-        else if(key > root->data)
-            root = root-> right;
+        if(key < root -> data)
+            root = root -> left;
+        else if(key > root -> data)
+            root = root ->  right;
         else
             break;
     }
@@ -65,7 +65,7 @@ uint32_t bst_find(const BST *bst, uint32_t key){
 }
 
 uint32_t bst_mass(const BST *bst){
-    return bst != NULL ? bst->mass : 0;
+    return bst != NULL ? bst -> mass : 0;
 }
 
 uint32_t _height_(TreeNode *tree_node){
@@ -73,8 +73,8 @@ uint32_t _height_(TreeNode *tree_node){
 
     if(tree_node == NULL) return 0;
     else {
-        l_height = _height_(tree_node->left);
-        r_height = _height_(tree_node->right);
+        l_height = _height_(tree_node -> left);
+        r_height = _height_(tree_node -> right);
 
         if(l_height > r_height)
             height = l_height + 1;
@@ -85,77 +85,77 @@ uint32_t _height_(TreeNode *tree_node){
 }
 
 uint32_t bst_height(const BST *bst){
-    return _height_(bst->root);
+    return _height_(bst -> root);
 }
 
 static TreeNode *_find_min_(TreeNode *root){
     if(root == NULL) return NULL;
-    if(root -> left == NULL) return root;
-    return _find_min_(root->left);
+    if(root  ->  left == NULL) return root;
+    return _find_min_(root -> left);
 }
 
 static TreeNode *_delete_(BST *bst, TreeNode *root, uint32_t key){
     if(root == NULL) return NULL;
-    if(key < root->data){
-        root->left = _delete_(bst, root->left, key);
-    } else if(key > root->data){
-        root->right = _delete_(bst, root->right, key);
-    } else if(root->left && root->right){
-        TreeNode *min_node = _find_min_(root->right);
-        root->data = min_node->data;
-        root->right = _delete_(bst, root->right, root->data);
+    if(key < root -> data){
+        root -> left = _delete_(bst, root -> left, key);
+    } else if(key > root -> data){
+        root -> right = _delete_(bst, root -> right, key);
+    } else if(root -> left && root -> right){
+        TreeNode *min_node = _find_min_(root -> right);
+        root -> data = min_node -> data;
+        root -> right = _delete_(bst, root -> right, root -> data);
     } else {
         TreeNode *temp = root;
-        if(root->left == NULL) root = root->right;
-        else root = root->left;
+        if(root -> left == NULL) root = root -> right;
+        else root = root -> left;
         free(temp);
-        --bst->mass;
+        --bst -> mass;
     }
     return root;
 }
 
 BST *bst_delete(BST *bst, uint32_t key){
-    TreeNode *root = _delete_(bst, bst->root, key);
-    bst->root = root;
+    TreeNode *root = _delete_(bst, bst -> root, key);
+    bst -> root = root;
     return bst;
 }
 
 static void _inorder_(TreeNode *root){
     if(root){
-        _inorder_(root->left);
-        printf("%d ", root->data);
-        _inorder_(root->right);
+        _inorder_(root -> left);
+        printf("%d ", root -> data);
+        _inorder_(root -> right);
     }
 }
 BST *bst_traversal_inorder_recursive(BST *bst){
     printf("\nIN-ORDER: ");
-    _inorder_(bst->root);
+    _inorder_(bst -> root);
     return bst;
 }
 
 static void _preorder_(TreeNode *root){
     if(root){
-        printf("%d ", root->data);
-        _preorder_(root->left);
-        _preorder_(root->right);
+        printf("%d ", root -> data);
+        _preorder_(root -> left);
+        _preorder_(root -> right);
     }
 }
 BST *bst_traversal_preorder_recursive(BST *bst){
     printf("\nPRE-ORDER: ");
-    _preorder_(bst->root);
+    _preorder_(bst -> root);
     return bst;
 }
 
 static void _postorder_(TreeNode *root){
     if(root){
-        _postorder_(root->left);
-        _postorder_(root->right);
-        printf("%d ", root->data);
+        _postorder_(root -> left);
+        _postorder_(root -> right);
+        printf("%d ", root -> data);
     }
 }
 BST *bst_traversal_postorder_recursive(BST *bst){
     printf("\nPOST-ORDER: ");
-    _postorder_(bst->root);
+    _postorder_(bst -> root);
     return bst;
 }
 /*
@@ -163,19 +163,19 @@ BST *bst_traversal_inorder_iterative(BST *bst){
     Stack stk = stack_new(0);
     StackResult res;
 
-    TreeNode *root = bst->root;
+    TreeNode *root = bst -> root;
 
     printf("\nIN-ORDER: ");
 
     while(root != NULL || !stack_is_empty(&stk)){
         if(root != NULL){
-            stack_push(&stk, root->data, &res);
-            root = root->left;
+            stack_push(&stk, root -> data, &res);
+            root = root -> left;
         } else {
             stack_pop(&stk, &res);
             root = res.data;
-            printf("%d ", root->data);
-            root = root->right;
+            printf("%d ", root -> data);
+            root = root -> right;
         }
     }
     stack_free(&stk);
@@ -189,18 +189,18 @@ BST *bst_traversal_level_order(BST *tree){
     Queue q = queue_new(0);
     QueueResult res;
 
-    TreeNode *root = bst->root;
+    TreeNode *root = bst -> root;
 
     queue_add(&q, root, &res);
     for(;;){
         queue_remove(&q, &res);
         if(root != NULL){
-            printf("%d ", root->data);
-            if(root->left){
-                queue_add(&q, root->left, &res);
+            printf("%d ", root -> data);
+            if(root -> left){
+                queue_add(&q, root -> left, &res);
             }
-            if(root->right){
-                queue_add(&q, root->right, &res);
+            if(root -> right){
+                queue_add(&q, root -> right, &res);
             } else {
                 break;
             }
@@ -211,14 +211,14 @@ BST *bst_traversal_level_order(BST *tree){
 */
 static void _display_node_(TreeNode *tree_node, uint32_t indent){
     if(tree_node != NULL){
-        _display_node_(tree_node -> right, indent + 6);
+        _display_node_(tree_node  ->  right, indent + 6);
         if(indent > 0)
             printf("%*s", indent, "");
-        printf("%d\n", tree_node -> data);
-        _display_node_(tree_node -> left, indent + 6);
+        printf("%d\n", tree_node  ->  data);
+        _display_node_(tree_node  ->  left, indent + 6);
     }
 }
 
 void bst_display(BST *bst){
-    _display_node_(bst -> root, 0);
+    _display_node_(bst  ->  root, 0);
 }
