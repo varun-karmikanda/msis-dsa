@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1791905375 source:c:\users\varunkarmikanda\msis\sem1\dsa\sorting\main.c
+	<stdio.h>
+	<stdlib.h>
+	<assert.h>
+	<stdio.h>
+	"sorting.h"
+
+1791905297 source:c:\users\varunkarmikanda\msis\sem1\dsa\sorting\sorting.c
+	<stdint.h>
+	"sorting.h"
+
+1791902452 c:\users\varunkarmikanda\msis\sem1\dsa\sorting\sorting.h
+	<stdint.h>
+
