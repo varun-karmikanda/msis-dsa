@@ -1,0 +1,16 @@
+# depslib dependency file v1.0
+1791912545 source:c:\users\varunkarmikanda\msis\sem1\dsa\hashing\main.c
+	<stdio.h>
+	<stdlib.h>
+	<stdio.h>
+	"hashing.h"
+
+1791911041 c:\users\varunkarmikanda\msis\sem1\dsa\hashing\hashing.h
+	<stdint.h>
+
+1791912522 source:c:\users\varunkarmikanda\msis\sem1\dsa\hashing\hashing.c
+	<stddef.h>
+	<stdint.h>
+	<string.h>
+	"hashing.h"
+
