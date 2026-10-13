@@ -31,6 +31,10 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="hashing.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="hashing.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>

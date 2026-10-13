@@ -1,0 +1,16 @@
+# depslib dependency file v1.0
+1791918619 source:c:\users\varunkarmikanda\msis\sem1\dsa\heap\main.c
+	<stdio.h>
+	<stdlib.h>
+	<assert.h>
+	"heap.h"
+
+1791916641 c:\users\varunkarmikanda\msis\sem1\dsa\heap\heap.h
+	<stdint.h>
+
+1791918638 source:c:\users\varunkarmikanda\msis\sem1\dsa\heap\heap.c
+	<stdint.h>
+	<assert.h>
+	<stddef.h>
+	"heap.h"
+
