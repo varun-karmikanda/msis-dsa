@@ -9,7 +9,16 @@ void test_graph(){
 
     graph_display(graph);
 
-    graph_adjecency_list(graph);
+//    graph_adjecency_list(graph);
+//    graph_display(graph);
+
+//    graph_fill_matrix(graph);
+//    graph_display(graph);
+
+    graph_adjecency_list_validated(graph);
+    graph_display(graph);
+
+    graph_fill_matrix(graph);
     graph_display(graph);
 }
 

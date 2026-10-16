@@ -4,6 +4,7 @@
 #include<stdint.h>
 
 #define MAX 10
+#define END_NEIGHBOURS 6767
 
 #define TRUE 1
 #define FALSE 0
@@ -24,6 +25,10 @@ struct _graph_ {
 Graph *graph_new(uint32_t size);
 
 Graph *graph_adjecency_list(Graph*graph);
+
+Graph *graph_adjecency_list_validated(Graph*graph);
+
+Graph *graph_fill_matrix(Graph *graph);
 
 Graph *graph_dfs(Graph *graph, uint32_t v);
 
