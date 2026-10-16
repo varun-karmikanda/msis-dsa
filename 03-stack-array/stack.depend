@@ -13,3 +13,12 @@
 1789577238 c:\users\varunkarmikanda\msis\sem1\dsa\stack\stack.h
 	<stdint.h>
 
+1789577238 source:c:\users\varunkarmikanda\msis\sem1\dsa\03-stack-array\main.c
+	<stdio.h>
+	<stdlib.h>
+	<assert.h>
+	"stack.h"
+
+1789577238 c:\users\varunkarmikanda\msis\sem1\dsa\03-stack-array\stack.h
+	<stdint.h>
+
