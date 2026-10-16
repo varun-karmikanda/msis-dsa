@@ -1,0 +1,16 @@
+# depslib dependency file v1.0
+1792178415 source:c:\users\varunkarmikanda\msis\sem1\dsa\graph\main.c
+	<stdio.h>
+	<stdlib.h>
+	<assert.h>
+	"graph.h"
+
+1792178509 c:\users\varunkarmikanda\msis\sem1\dsa\graph\graph.h
+	<stdint.h>
+
+1792178307 source:c:\users\varunkarmikanda\msis\sem1\dsa\graph\graph.c
+	<stddef.h>
+	<stdint.h>
+	<stdbool.h>
+	"graph.h"
+
