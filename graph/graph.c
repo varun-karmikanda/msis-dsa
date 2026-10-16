@@ -3,6 +3,9 @@
 #include<stdbool.h>
 #include "graph.h"
 
+
+uint32_t visited[MAX] = {0};
+
 Graph *graph_new(uint32_t size){
     Graph *graph = (Graph*) malloc (sizeof(Graph));
 
@@ -105,17 +108,35 @@ Graph *graph_fill_matrix(Graph *graph){
         last_vertex = graph->neighbours[i];
 
         for(int32_t j = 0; j < graph->max_nodes; j++){
-//            if(j != i){
+            if(j != i){
                 vertex = _get_node_(j);
                 last_vertex->next = vertex;
                 last_vertex = vertex;
-//            }
+            }
         }
     }
     return graph;
 }
 
-Graph *graph_dfs(Graph *graph, uint32_t v);
+static void _dfs_(Graph *graph, uint32_t v){
+    Node *vertex;
+    visited[v] = TRUE;
+    printf("%d ", v);
+    for(vertex = graph->neighbours[v]; vertex != NULL; vertex = vertex->next){
+        if(!visited[vertex->node_id])
+            _dfs_(graph, vertex->node_id);
+    }
+
+}
+
+Graph *graph_dfs(Graph *graph, uint32_t v){
+    printf("\nDFS: ");
+    for(int32_t i = 0; i < graph->max_nodes; i++){
+        visited[i] = FALSE;
+    }
+    _dfs_(graph, v);
+    return graph;
+}
 
 void graph_display(Graph *graph){
     printf("GRAPH{");

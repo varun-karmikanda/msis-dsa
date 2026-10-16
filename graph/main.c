@@ -18,8 +18,7 @@ void test_graph(){
     graph_adjecency_list_validated(graph);
     graph_display(graph);
 
-    graph_fill_matrix(graph);
-    graph_display(graph);
+    graph_dfs(graph, 0);
 }
 
 int main()

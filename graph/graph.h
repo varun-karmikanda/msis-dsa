@@ -22,6 +22,8 @@ struct _graph_ {
     Node **neighbours;
 };
 
+extern uint32_t visited[MAX];
+
 Graph *graph_new(uint32_t size);
 
 Graph *graph_adjecency_list(Graph*graph);
