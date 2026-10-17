@@ -1,0 +1,27 @@
+# depslib dependency file v1.0
+1792246212 source:c:\users\varunkarmikanda\msis\sem1\dsa\searching\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"searching.h"
+
+1792245937 source:c:\users\varunkarmikanda\msis\sem1\dsa\searching\searching.c
+	<stdint.h>
+	"searching.h"
+
+1792245937 c:\users\varunkarmikanda\msis\sem1\dsa\searching\searching.h
+	<stdint.h>
+
+1792246212 source:c:\users\varunkarmikanda\msis\sem1\dsa\10-searching\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"searching.h"
+
+1792245937 c:\users\varunkarmikanda\msis\sem1\dsa\10-searching\searching.h
+	<stdint.h>
+
+1792245937 source:c:\users\varunkarmikanda\msis\sem1\dsa\10-searching\searching.c
+	<stdint.h>
+	"searching.h"
+
