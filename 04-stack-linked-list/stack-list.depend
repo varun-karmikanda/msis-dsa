@@ -1,0 +1,31 @@
+# depslib dependency file v1.0
+1792233567 source:c:\users\varunkarmikanda\msis\sem1\dsa\06-stack-linked-list\main.c
+	<stdio.h>
+	<stdlib.h>
+	<assert.h>
+	"stack_list.h"
+
+1792233827 source:c:\users\varunkarmikanda\msis\sem1\dsa\06-stack-linked-list\stack_list.c
+	<stdio.h>
+	<stdint.h>
+	<stddef.h>
+	"stack_list.h"
+
+1792231058 c:\users\varunkarmikanda\msis\sem1\dsa\06-stack-linked-list\stack_list.h
+	<stdint.h>
+
+1792233876 source:c:\users\varunkarmikanda\msis\sem1\dsa\04-stack-linked-list\main.c
+	<stdio.h>
+	<stdlib.h>
+	<assert.h>
+	"stack_list.h"
+
+1792231058 c:\users\varunkarmikanda\msis\sem1\dsa\04-stack-linked-list\stack_list.h
+	<stdint.h>
+
+1792233827 source:c:\users\varunkarmikanda\msis\sem1\dsa\04-stack-linked-list\stack_list.c
+	<stdio.h>
+	<stdint.h>
+	<stddef.h>
+	"stack_list.h"
+
