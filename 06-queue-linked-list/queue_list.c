@@ -97,10 +97,36 @@ Queue *queue_dequeue(Queue *queue, QueueResult *res){
     return queue;
 }
 
-Queue *queue_peek(const Queue *queue);
+Queue *queue_peek(const Queue *queue, QueueResult *res){
+    if(queue == NULL || res == NULL) return NULL;
+
+    if(queue->count == 0){
+        _set_result_(res, RESULT_INVALID, QUEUE_EMPTY);
+        return queue;
+    }
+
+    _set_result_(res, queue->head->data, QUEUE_OK);
+
+    return queue;
+}
 
 
-Queue *queue_clear(Queue queue);
+Queue *queue_clear(Queue *queue){
+    if(queue == NULL) return NULL;
+
+    Node *current = queue->head;
+
+    while(current != NULL){
+        Node *temp = current;
+        current = current->next;
+        free(current);
+    }
+    queue->count = 0;
+    queue->head = NULL;
+    queue->tail = NULL;
+
+    return queue;
+}
 
 
 void queue_display(const Queue *queue, QueueResult *res){

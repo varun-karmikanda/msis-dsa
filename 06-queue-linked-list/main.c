@@ -34,7 +34,8 @@ void test_queue_list(){
     assert(res.data == 67);
     queue_display(queue, &res);
 
-
+    queue_peek(queue, &res);
+    assert(res.data == 51);
 
     queue_dequeue(queue, &res);
     queue_dequeue(queue, &res);
@@ -45,6 +46,9 @@ void test_queue_list(){
 
     assert(queue_is_empty(queue) == 1);
 
+    queue_display(queue, &res);
+
+    queue_clear(queue);
     queue_display(queue, &res);
 }
 

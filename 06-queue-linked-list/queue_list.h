@@ -38,9 +38,9 @@ uint32_t queue_is_empty(const Queue *queue);
 
 Queue *queue_enqueue(Queue *queue, uint32_t data, QueueResult *res);
 Queue *queue_dequeue(Queue *queue, QueueResult *res);
-Queue *queue_peek(const Queue *queue);
+Queue *queue_peek(const Queue *queue, QueueResult *res);
 
-Queue *queue_clear(Queue queue);
+Queue *queue_clear(Queue *queue);
 
 void queue_display(const Queue *queue, QueueResult *res);
 
