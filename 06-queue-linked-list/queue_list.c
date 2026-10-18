@@ -77,7 +77,25 @@ Queue *queue_enqueue(Queue *queue, uint32_t data, QueueResult *res){
     return queue;
 }
 
-Queue *queue_dequeue(Queue *queue, QueueResult *res);
+Queue *queue_dequeue(Queue *queue, QueueResult *res){
+    if(queue == NULL || res == NULL) return NULL;
+
+    if(queue->count == 0){
+        _set_result_(res, RESULT_INVALID, QUEUE_EMPTY);
+        return queue;
+    }
+
+    Node *temp = queue->head;
+    queue->head = queue->head->next;
+    if(queue->head == NULL){
+        queue->tail = NULL;
+    }
+    --queue->count;
+    _set_result_(res, temp->data, QUEUE_OK);
+    free(temp);
+
+    return queue;
+}
 
 Queue *queue_peek(const Queue *queue);
 
