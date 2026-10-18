@@ -1,0 +1,28 @@
+# depslib dependency file v1.0
+1740933562 source:c:\users\varunkarmikanda\msis\sem1\dsa\queue-list\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1792267074 source:c:\users\varunkarmikanda\msis\sem1\dsa\queue-list\queue_list.c
+	<stdint.h>
+	<stddef.h>
+	"queue_list.h"
+
+1792266996 c:\users\varunkarmikanda\msis\sem1\dsa\queue-list\queue_list.h
+	<stdint.h>
+
+1792315135 source:c:\users\varunkarmikanda\msis\sem1\dsa\06-queue-linked-list\main.c
+	<stdio.h>
+	<stdlib.h>
+	<assert.h>
+	"queue_list.h"
+
+1792315183 source:c:\users\varunkarmikanda\msis\sem1\dsa\06-queue-linked-list\queue_list.c
+	<stdint.h>
+	<stddef.h>
+	<stdio.h>
+	"queue_list.h"
+
+1792266996 c:\users\varunkarmikanda\msis\sem1\dsa\06-queue-linked-list\queue_list.h
+	<stdint.h>
+
