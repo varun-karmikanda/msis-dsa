@@ -21,11 +21,13 @@ static Node* _new_node_(uint32_t data){
 
 
 Stack *stack_new(uint32_t size, StackResult *res){
+    if(res == NULL) return NULL;
+
     size = size > 0 && size < MAX_DEPTH ? size : MAX_DEPTH;
 
     Stack *stack = (Stack*) malloc (sizeof(Stack));
 
-    if(stack == NULL || res == NULL) return NULL;
+    if(stack == NULL) return NULL;
 
     stack->size = size;
     stack->count = 0;
