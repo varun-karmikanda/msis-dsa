@@ -113,7 +113,7 @@ void q02_test_stack(){
 }
 
 void q03_test_queue(){
-    printf("----- Q02 - QUEUE -----");
+    printf("----- Q03 - QUEUE -----");
 
     Queue queue = queue_new(10);
     QueueResult queue_result = {-1, RESULT_INVALID};
@@ -147,10 +147,34 @@ void q03_test_queue(){
     queue_display(&queue, &queue_result);
 }
 
+void q04_test_sll(){
+    printf("----- Q04 - SINGLY LINED LIST -----");
+    List *list = slist_new();
+
+    slist_add_head(list, 67);
+    slist_add_head(list, 33);
+    slist_add_head(list, 54);
+    slist_add_head(list, 90);
+    slist_add_head(list, 21);
+
+    slist_display_list(list);
+
+    slist_add_tail(list, 5);
+    slist_add_tail(list, 1);
+    slist_add_tail(list, 8);
+
+    slist_display_list(list);
+
+    assert(slist_maximum(list) == 90);
+    assert(slist_minimum(list) == 1);
+
+}
+
 int main()
 {
 //    q01_test_dll();
 //    q02_test_stack();
-    q03_test_queue();
+//    q03_test_queue();
+    q04_test_sll();
     return 0;
 }
