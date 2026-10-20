@@ -38,6 +38,22 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="q01_double_linked_list.h" />
+		<Unit filename="q02_stack.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="q02_stack.h" />
+		<Unit filename="q03_queue.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="q03_queue.h" />
+		<Unit filename="q04_singly_linked_list.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="q04_singly_linked_list.h" />
+		<Unit filename="q05_singly_linked_list.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="q05_singly_linked_list.h" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

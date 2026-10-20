@@ -7,7 +7,7 @@
 
 void q01_test_dll(){
 
-    printf("----- Q01 - DOUBLE LINED LIST -----");
+    printf("\n\n----- Q01 - DOUBLE LINED LIST -----\n");
 
     List *list = dll_new();
 
@@ -86,7 +86,7 @@ void q01_test_dll(){
 }
 
 void q02_test_stack(){
-    printf("----- Q02 - STACK -----");
+    printf("\n\n----- Q02 - STACK -----\n");
 
     Stack stack = stack_new(6);
     StackResult stack_result;
@@ -113,7 +113,7 @@ void q02_test_stack(){
 }
 
 void q03_test_queue(){
-    printf("----- Q03 - QUEUE -----");
+    printf("\n\n----- Q03 - QUEUE -----\n");
 
     Queue queue = queue_new(10);
     QueueResult queue_result = {-1, RESULT_INVALID};
@@ -148,7 +148,7 @@ void q03_test_queue(){
 }
 
 void q04_test_sll(){
-    printf("----- Q04 - SINGLY LINED LIST -----");
+    printf("\n\n----- Q04 - SINGLY LINED LIST -----\n");
     List *list = slist_new();
 
     slist_add_head(list, 67);
@@ -170,11 +170,41 @@ void q04_test_sll(){
 
 }
 
+void q05_test_sll(){
+    printf("\n\n----- Q05 - SINGLY LINED LIST -----\n");
+    List *l = sll_new();
+
+    sll_add_head(l, 67);
+    sll_add_head(l, 33);
+    sll_add_head(l, 54);
+    sll_add_head(l, 67);
+    sll_add_head(l, 99);
+    sll_add_head(l, 21);
+    sll_add_head(l, 54);
+
+    sll_display_list(l);
+
+    sll_add_head(l, 67);
+    sll_add_tail(l, 5);
+    sll_add_tail(l, 6);
+    sll_add_tail(l, 6);
+    sll_add_tail(l, 8);
+
+    sll_display_list(l);
+
+    sll_delete_dupicates(l);
+    sll_display_list(l);
+
+    assert(l->length);
+
+}
+
 int main()
 {
-//    q01_test_dll();
-//    q02_test_stack();
-//    q03_test_queue();
+    q01_test_dll();
+    q02_test_stack();
+    q03_test_queue();
     q04_test_sll();
+    q05_test_sll();
     return 0;
 }
