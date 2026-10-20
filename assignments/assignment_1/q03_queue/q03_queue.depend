@@ -1,0 +1,21 @@
+# depslib dependency file v1.0
+1792514350 source:c:\users\varunkarmikanda\msis\sem1\dsa\assignments\assignment_1\q03_queue\main.c
+	<stdio.h>
+	<stdlib.h>
+	<assert.h>
+	"q03_queue.h"
+
+1792514299 c:\users\varunkarmikanda\msis\sem1\dsa\assignments\assignment_1\q03_queue\q03_queue.h
+	<stdint.h>
+
+1792514350 source:c:\users\varunkarmikanda\msis\sem1\dsa\assignments\assignment_1\q03_queue\q03_queue.c
+	<stdio.h>
+	<stdint.h>
+	"q03_queue.h"
+
+1792514350 source:c:\users\varunkarmikanda\msis\sem1\dsa\assignments\assignment_1\q03_queue\q03_main.c
+	<stdio.h>
+	<stdlib.h>
+	<assert.h>
+	"q03_queue.h"
+

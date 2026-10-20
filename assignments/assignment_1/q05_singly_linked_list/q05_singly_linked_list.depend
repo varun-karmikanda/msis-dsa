@@ -1,0 +1,16 @@
+# depslib dependency file v1.0
+1792515369 source:c:\users\varunkarmikanda\msis\sem1\dsa\assignments\assignment_1\q05_singly_linked_list\main.c
+	<stdio.h>
+	<stdlib.h>
+	<assert.h>
+	"q05_singly_linked_list.h"
+
+1792515188 source:c:\users\varunkarmikanda\msis\sem1\dsa\assignments\assignment_1\q05_singly_linked_list\q05_singly_linked_list.c
+	<stdint.h>
+	<stdlib.h>
+	<stdio.h>
+	"q05_singly_linked_list.h"
+
+1792515177 c:\users\varunkarmikanda\msis\sem1\dsa\assignments\assignment_1\q05_singly_linked_list\q05_singly_linked_list.h
+	<stdint.h>
+

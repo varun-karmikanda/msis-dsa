@@ -1,0 +1,19 @@
+# depslib dependency file v1.0
+1740933562 source:c:\users\varunkarmikanda\msis\sem1\dsa\assignments\assignment_1\q02_stack\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1792514129 source:c:\users\varunkarmikanda\msis\sem1\dsa\assignments\assignment_1\q02_stack\q02_stack.c
+	<stdint.h>
+	<stdbool.h>
+	"q02_stack.h"
+
+1792514072 c:\users\varunkarmikanda\msis\sem1\dsa\assignments\assignment_1\q02_stack\q02_stack.h
+	<stdint.h>
+
+1792514173 source:c:\users\varunkarmikanda\msis\sem1\dsa\assignments\assignment_1\q02_stack\q02_main.c
+	<stdio.h>
+	<stdlib.h>
+	<assert.h>
+	"q02_stack.h"
+
