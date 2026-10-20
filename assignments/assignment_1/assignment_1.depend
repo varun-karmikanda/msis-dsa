@@ -1,10 +1,11 @@
 # depslib dependency file v1.0
-1792433879 source:c:\users\varunkarmikanda\msis\sem1\dsa\assignments\assignment_1\main.c
+1792480535 source:c:\users\varunkarmikanda\msis\sem1\dsa\assignments\assignment_1\main.c
 	<stdio.h>
 	<stdlib.h>
 	<assert.h>
 	"q01_double_linked_list.h"
 	"q02_stack.h"
+	"q03_queue.h"
 
 1792430494 source:c:\users\varunkarmikanda\msis\sem1\dsa\assignments\assignment_1\q01_double_linked_list.c
 	<stdint.h>
@@ -20,5 +21,13 @@
 	"q02_stack.h"
 
 1792432800 c:\users\varunkarmikanda\msis\sem1\dsa\assignments\assignment_1\q02_stack.h
+	<stdint.h>
+
+1792480214 source:c:\users\varunkarmikanda\msis\sem1\dsa\assignments\assignment_1\q03_queue.c
+	<stdio.h>
+	<stdint.h>
+	"q03_queue.h"
+
+1792479677 c:\users\varunkarmikanda\msis\sem1\dsa\assignments\assignment_1\q03_queue.h
 	<stdint.h>
 

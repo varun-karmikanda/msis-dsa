@@ -3,6 +3,7 @@
 #include <assert.h>
 #include "q01_double_linked_list.h"
 #include "q02_stack.h"
+#include "q03_queue.h"
 
 void q01_test_dll(){
 
@@ -111,9 +112,45 @@ void q02_test_stack(){
 
 }
 
+void q03_test_queue(){
+    printf("----- Q02 - QUEUE -----");
+
+    Queue queue = queue_new(10);
+    QueueResult queue_result = {-1, RESULT_INVALID};
+    queue_display(&queue, &queue_result);
+
+    queue_add(&queue, 67, &queue_result);
+    assert(queue_result.data == 67);
+    assert(queue_result.status== QUEUE_OK);
+    queue_display(&queue, &queue_result);
+
+    queue_add(&queue, 51, &queue_result);
+    queue_add(&queue, 63, &queue_result);
+    queue_add(&queue, 95, &queue_result);
+    queue_add(&queue, 44, &queue_result);
+    queue_add(&queue, 77, &queue_result);
+    queue_add(&queue, 32, &queue_result);
+    queue_add(&queue, 21, &queue_result);
+    queue_add(&queue, 12, &queue_result);
+    queue_add(&queue, 78, &queue_result);
+
+    queue_display(&queue, &queue_result);
+
+    queue_peek(&queue, &queue_result);
+    assert(queue_result.data == 67);
+
+    queue_reverse_first_k(&queue, 6, &queue_result);
+
+    queue_peek(&queue, &queue_result);
+    assert(queue_result.data == 77);
+
+    queue_display(&queue, &queue_result);
+}
+
 int main()
 {
 //    q01_test_dll();
-    q02_test_stack();
+//    q02_test_stack();
+    q03_test_queue();
     return 0;
 }
