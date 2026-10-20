@@ -1,6 +1,8 @@
 #ifndef Q04_SINGLY_LINKED_LIST_H_INCLUDED
 #define Q04_SINGLY_LINKED_LIST_H_INCLUDED
 
+#include <stdint.h>
+
 typedef struct _node_ Node;
 typedef struct _list_ List;
 

@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1792512607 source:c:\users\varunkarmikanda\msis\sem1\dsa\assignments\assignment_1\q01_double_linked_list\q01_double_linked_list.c
+	<stdint.h>
+	<stdio.h>
+	"q01_double_linked_list.h"
+
+1792512607 c:\users\varunkarmikanda\msis\sem1\dsa\assignments\assignment_1\q01_double_linked_list\q01_double_linked_list.h
+	<stdint.h>
+
+1792514223 source:c:\users\varunkarmikanda\msis\sem1\dsa\assignments\assignment_1\q01_double_linked_list\q01_main.c
+	<stdio.h>
+	<stdlib.h>
+	<assert.h>
+	"q01_double_linked_list.h"
+
