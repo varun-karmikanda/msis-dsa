@@ -193,5 +193,17 @@ uint32_t bst_validate(BST *bst){
     _validate_(bst->root);
 }
 
+void _sorted_dll_(TreeNode *root, List *list){
+    if(root == NULL) return;
 
+    _sorted_dll_(root->left, list);
+    dll_add_tail(list, root->data);
+    _sorted_dll_(root->right, list);
+}
+
+List *bst_to_sorted_dll(BST *tree){
+    List *list = dll_new();
+    _sorted_dll_(tree->root, list);
+    return list;
+}
 

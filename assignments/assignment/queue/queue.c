@@ -34,9 +34,7 @@ Queue *queue_enqueue(Queue *queue, uint32_t data, QueueResult * res){
             stack_push(queue->temp_stack, queue->stack->stk[queue->stack->top]);
             stack_pop(queue->stack);
         }
-        queue_display(queue);
         stack_push(queue->stack, data);
-        queue_display(queue);
         while(queue->temp_stack->top != -1){
             stack_push(queue->stack, queue->temp_stack->stk[queue->temp_stack->top]);
             stack_pop(queue->temp_stack);

@@ -33,7 +33,9 @@ void test_bst(){
 
     assert(bst_validate(bst));
 
+    List *list = bst_to_sorted_dll(bst);
 
+    dll_display(list);
 
 }
 

@@ -36,4 +36,6 @@ void bst_display(BST *bst);
 
 uint32_t bst_validate(BST *bst);
 
+List *bst_to_sorted_dll(BST *tree);
+
 #endif // BST_H_INCLUDED
