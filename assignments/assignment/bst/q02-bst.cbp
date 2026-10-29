@@ -31,6 +31,14 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="bst.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="bst.h" />
+		<Unit filename="dll.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="dll.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>

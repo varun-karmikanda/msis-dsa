@@ -190,7 +190,7 @@ uint32_t _validate_(TreeNode *root){
 }
 
 uint32_t bst_validate(BST *bst){
-    _validate_(bst->root);
+    return _validate_(bst->root);
 }
 
 void _sorted_dll_(TreeNode *root, List *list){
@@ -201,9 +201,9 @@ void _sorted_dll_(TreeNode *root, List *list){
     _sorted_dll_(root->right, list);
 }
 
-List *bst_to_sorted_dll(BST *tree){
+List *bst_to_sorted_dll(BST *bst){
     List *list = dll_new();
-    _sorted_dll_(tree->root, list);
+    _sorted_dll_(bst->root, list);
     return list;
 }
 

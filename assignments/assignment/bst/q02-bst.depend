@@ -1,11 +1,11 @@
 # depslib dependency file v1.0
-1793208411 source:c:\users\varunkarmikanda\msis\sem1\dsa\assignments\assignment\bst\main.c
+1793257993 source:c:\users\varunkarmikanda\msis\sem1\dsa\assignments\assignment\bst\main.c
 	<stdio.h>
 	<stdlib.h>
 	<assert.h>
 	"bst.h"
 
-1793208353 source:c:\users\varunkarmikanda\msis\sem1\dsa\assignments\assignment\bst\bst.c
+1793257973 source:c:\users\varunkarmikanda\msis\sem1\dsa\assignments\assignment\bst\bst.c
 	<stdint.h>
 	<stdlib.h>
 	<string.h>
@@ -13,7 +13,7 @@
 	"bst.h"
 	"dll.h"
 
-1793208320 c:\users\varunkarmikanda\msis\sem1\dsa\assignments\assignment\bst\bst.h
+1793256455 c:\users\varunkarmikanda\msis\sem1\dsa\assignments\assignment\bst\bst.h
 	<stdint.h>
 	"dll.h"
 

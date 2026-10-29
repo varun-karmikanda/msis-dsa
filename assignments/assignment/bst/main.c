@@ -31,7 +31,7 @@ void test_bst(){
     bst_traversal_preorder_recursive(bst);
     bst_traversal_postorder_recursive(bst);
 
-    assert(bst_validate(bst));
+    assert(bst_validate(bst) == 1);
 
     List *list = bst_to_sorted_dll(bst);
 
