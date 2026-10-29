@@ -1,0 +1,29 @@
+# depslib dependency file v1.0
+1793257993 source:c:\users\varunkarmikanda\msis\sem1\dsa\assignments\assignment\bst\main.c
+	<stdio.h>
+	<stdlib.h>
+	<assert.h>
+	"bst.h"
+
+1793257973 source:c:\users\varunkarmikanda\msis\sem1\dsa\assignments\assignment\bst\bst.c
+	<stdint.h>
+	<stdlib.h>
+	<string.h>
+	<stdio.h>
+	"bst.h"
+	"dll.h"
+
+1793256455 c:\users\varunkarmikanda\msis\sem1\dsa\assignments\assignment\bst\bst.h
+	<stdint.h>
+	"dll.h"
+
+1793207978 source:c:\users\varunkarmikanda\msis\sem1\dsa\assignments\assignment\bst\dll.c
+	<stdint.h>
+	<stdbool.h>
+	<stdio.h>
+	"dll.h"
+
+1793208336 c:\users\varunkarmikanda\msis\sem1\dsa\assignments\assignment\bst\dll.h
+	<stdint.h>
+	<stdbool.h>
+

@@ -1,0 +1,76 @@
+# depslib dependency file v1.0
+1793205277 source:c:\users\varunkarmikanda\msis\sem1\dsa\assignments\q01queue\queue.c
+	<stdint.h>
+	<stdlib.h>
+	<stdio.h>
+	"stack.h"
+	"queue.h"
+
+1793205057 c:\users\varunkarmikanda\msis\sem1\dsa\assignments\q01queue\stack.h
+	<stdint.h>
+
+1793205302 c:\users\varunkarmikanda\msis\sem1\dsa\assignments\q01queue\queue.h
+	<stdint.h>
+	"stack.h"
+
+1793205057 source:c:\users\varunkarmikanda\msis\sem1\dsa\assignments\q01queue\stack.c
+	<stdio.h>
+	<stdint.h>
+	"stack.h"
+
+1793205293 source:c:\users\varunkarmikanda\msis\sem1\dsa\assignments\q01queue\main.c
+	<stdio.h>
+	<stdlib.h>
+	<assert.h>
+	"queue.h"
+
+1793205293 source:c:\users\varunkarmikanda\msis\sem1\dsa\assignments\assignment\q01-queue\main.c
+	<stdio.h>
+	<stdlib.h>
+	<assert.h>
+	"queue.h"
+
+1793205302 c:\users\varunkarmikanda\msis\sem1\dsa\assignments\assignment\q01-queue\queue.h
+	<stdint.h>
+	"stack.h"
+
+1793205057 c:\users\varunkarmikanda\msis\sem1\dsa\assignments\assignment\q01-queue\stack.h
+	<stdint.h>
+
+1793205277 source:c:\users\varunkarmikanda\msis\sem1\dsa\assignments\assignment\q01-queue\queue.c
+	<stdint.h>
+	<stdlib.h>
+	<stdio.h>
+	"stack.h"
+	"queue.h"
+
+1793205057 source:c:\users\varunkarmikanda\msis\sem1\dsa\assignments\assignment\q01-queue\stack.c
+	<stdio.h>
+	<stdint.h>
+	"stack.h"
+
+1793205293 source:c:\users\varunkarmikanda\msis\sem1\dsa\assignments\assignment\queue\main.c
+	<stdio.h>
+	<stdlib.h>
+	<assert.h>
+	"queue.h"
+
+1793205302 c:\users\varunkarmikanda\msis\sem1\dsa\assignments\assignment\queue\queue.h
+	<stdint.h>
+	"stack.h"
+
+1793205057 c:\users\varunkarmikanda\msis\sem1\dsa\assignments\assignment\queue\stack.h
+	<stdint.h>
+
+1793205277 source:c:\users\varunkarmikanda\msis\sem1\dsa\assignments\assignment\queue\queue.c
+	<stdint.h>
+	<stdlib.h>
+	<stdio.h>
+	"stack.h"
+	"queue.h"
+
+1793205057 source:c:\users\varunkarmikanda\msis\sem1\dsa\assignments\assignment\queue\stack.c
+	<stdio.h>
+	<stdint.h>
+	"stack.h"
+
