@@ -16,6 +16,10 @@ void test() {
     slist_add_tail(l1, 48);
 
     slist_display_list(l1);
+
+
+    slist_merge_sort(l1);
+    slist_display_list(l1);
 }
 
 int main()

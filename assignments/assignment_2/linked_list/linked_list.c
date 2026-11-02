@@ -51,6 +51,67 @@ List *slist_add_tail(List *list, uint32_t data){
     return list;
 }
 
+static Node *_list_middle_node_(Node *node){
+    Node *slow = node;
+    Node *fast = node->next;
+    while(fast != NULL && fast->next != NULL){
+        slow = slow->next;
+        fast = fast->next->next;
+    }
+    return slow;
+}
+
+static Node *_merge_(Node *left, Node *right){
+    Node *dummy = _list_new_node_(0);
+    Node *temp = dummy;
+
+    while(left != NULL && right != NULL){
+        if(left->data <= right->data){
+            temp->next = left;
+            temp = left;
+            left = left->next;
+        } else {
+            temp->next = right;
+            temp = right;
+            right = right->next;
+        }
+    }
+    if(left) temp->next = left;
+    else temp->next = right;
+
+    return dummy->next;
+}
+
+static Node *_merge_sort_(Node *node){
+    if(node == NULL || node->next == NULL) return node;
+
+    Node *middle_node = _list_middle_node_(node);
+    Node *left = node;
+    Node *right = middle_node->next;
+    middle_node->next = NULL;
+
+    left = _merge_sort_(left);
+    right = _merge_sort_(right);
+
+    return _merge_(left, right);
+}
+
+List *slist_merge_sort(List *list){
+    if(list == NULL || list->head == NULL) return NULL;
+
+    if(list->head == list->tail) return list;
+
+    list ->head = _merge_sort_(list->head);
+
+    Node *temp = list->head;
+    while(temp != NULL) temp = temp->next;
+
+    list->tail = temp;
+
+    return list;
+}
+
+
 List slist_display_list(List *list){
     if(list == NULL){
         printf("--- NULL ---");
