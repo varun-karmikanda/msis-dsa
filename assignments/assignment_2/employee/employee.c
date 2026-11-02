@@ -65,7 +65,24 @@ EmployeeNode *employee_search(BST *bst, uint32_t id){
     return root;
 }
 
-BST *employee_salary_between(const BST *bst);
+static void _salary_in_between_(EmployeeNode *root, float lower_bound, float upper_bound){
+    if(root){
+        _salary_in_between_(root->left, lower_bound, upper_bound);
+
+        if(root->employee.salary > lower_bound && root->employee.salary < upper_bound){
+            employee_details_display(root);
+        }
+
+        _salary_in_between_(root->right, lower_bound, upper_bound);
+    }
+}
+
+BST *employee_salary_in_between(const BST *bst, float lower_bound, float upper_bound){
+    printf("\n\n------ SALARY BETWEEN %.2f - %.2f ------", lower_bound, upper_bound);
+    _salary_in_between_(bst->root, lower_bound, upper_bound);
+    printf("\n------------------------------------------------");
+    return bst;
+}
 
 static void _inorder_(EmployeeNode *root){
     if(root){

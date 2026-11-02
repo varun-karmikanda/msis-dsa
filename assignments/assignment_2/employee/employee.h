@@ -32,7 +32,7 @@ BST *employee_add(BST *bst, uint32_t id, char name[], float salary);
 
 EmployeeNode *employee_search(BST *bst, uint32_t id);
 
-BST *employee_salary_between(const BST *bst);
+BST *employee_salary_in_between(const BST *bst, float lower_bound, float upper_bound);
 
 BST *employee_details(const BST *bst);
 

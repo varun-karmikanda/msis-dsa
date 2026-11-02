@@ -16,10 +16,14 @@ void test_employee(){
 
     employee_display(employee_tree);
 
-    EmployeeNode *employee_node = employee_search(employee_tree, 82);
-    employee_details_display(employee_node);
+    EmployeeNode *employee_node_1 = employee_search(employee_tree, 67);
+    EmployeeNode *employee_node_2 = employee_search(employee_tree, 82);
+    employee_details_display(employee_node_1);
+    employee_details_display(employee_node_2);
 
     employee_details(employee_tree);
+
+    employee_salary_in_between(employee_tree, 50000.0, 70000.0);
 }
 
 int main()
