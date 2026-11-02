@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1793632537 source:c:\users\varunkarmikanda\msis\sem1\dsa\assignments\assignment_2\linked_list\main.c
+	<stdio.h>
+	<stdlib.h>
+	<assert.h>
+	"linked_list.h"
+
+1793631394 c:\users\varunkarmikanda\msis\sem1\dsa\assignments\assignment_2\linked_list\linked_list.h
+	<stdint.h>
+
+1793632600 source:c:\users\varunkarmikanda\msis\sem1\dsa\assignments\assignment_2\linked_list\linked_list.c
+	<stdint.h>
+	<stdlib.h>
+	"linked_list.h"
+
