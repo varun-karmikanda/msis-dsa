@@ -1,0 +1,16 @@
+# depslib dependency file v1.0
+1793641522 source:c:\users\varunkarmikanda\msis\sem1\dsa\assignments\assignment_2\employee\main.c
+	<stdio.h>
+	<stdlib.h>
+	<assert.h>
+	"employee.h"
+
+1793641588 source:c:\users\varunkarmikanda\msis\sem1\dsa\assignments\assignment_2\employee\employee.c
+	<stdint.h>
+	<stdlib.h>
+	<string.h>
+	"employee.h"
+
+1793641522 c:\users\varunkarmikanda\msis\sem1\dsa\assignments\assignment_2\employee\employee.h
+	<stdint.h>
+
