@@ -111,6 +111,23 @@ List *slist_merge_sort(List *list){
     return list;
 }
 
+List *slist_merge_list(List *list_1, List *list_2){
+    if(list_1 == NULL) return list_2;
+    if(list_2 == NULL) return list_1;
+
+    List *merged = slist_new();
+
+    merged->head = _merge_(list_1->head, list_2->head);
+
+    Node *temp = merged->head;
+
+    while(temp->next != NULL) temp = temp->next;
+
+    merged->tail = temp;
+    merged->length = list_1->length + list_2->length;
+
+    return merged;
+}
 
 List slist_display_list(List *list){
     if(list == NULL){

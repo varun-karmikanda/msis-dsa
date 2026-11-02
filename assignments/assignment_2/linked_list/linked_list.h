@@ -24,6 +24,8 @@ List *slist_add_tail(List *list, uint32_t data);
 
 List *slist_merge_sort(List *list);
 
+List *slist_merge_list(List *list_1, List *list_2);
+
 List slist_display_list(List *list);
 
 #endif // LINKED_LIST_H_INCLUDED
